@@ -20,6 +20,7 @@ public class ShippingAddressEntity {
     private String zipCode;
     private String country;
     private String addType;
+    private String deleteSw;
 
     @OneToMany
     @JoinColumn(name = "cId")   // foreign key

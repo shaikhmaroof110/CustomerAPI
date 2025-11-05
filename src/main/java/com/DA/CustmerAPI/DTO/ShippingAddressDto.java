@@ -13,4 +13,7 @@ public class ShippingAddressDto {
     private String zipCode;
     private String country;
     private String addType;
+    private String deleteSw;
+    private Integer cId;
+
 }

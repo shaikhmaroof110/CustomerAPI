@@ -5,13 +5,12 @@ import com.DA.CustmerAPI.DTO.ShippingAddressDto;
 import com.DA.CustmerAPI.entities.ShippingAddressEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface ShippingAddressRepository extends JpaRepository<ShippingAddressEntity, Long> {
 
-    public ShippingAddressDto saveAddress();
-    public ShippingAddressDto getAddress(Long addr_Id);
-    public void deleteAddress(Long addr_Id);
-
-    public CustomerDto getAllCustomerByCustomerId(Integer cId);
+    // select * from shipping_addr where customer_id = ? and delete_sw=?
+    public List<ShippingAddressEntity> findByCustomerCustomerIdAndDeleteSw(Integer customerId, String deleteSw);
 
 
 }
